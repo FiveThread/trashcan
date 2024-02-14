@@ -10,7 +10,7 @@ SRC := $(wildcard $(SRC_DIR)/*.c)
 
 CC := gcc
 CPPFLAGS = -Iinclude -MMD -MP
-CFLAGS   = -Wall -Iinclude -Iinclude/math
+CFLAGS   = -Wall -Iinclude
 LDFLAGS  = -Llib
 LDLIBS   = -lm
 
@@ -31,7 +31,7 @@ ifeq ($(OS),WINDOWS)
 	LDLIBS += -lmingw32 -lSDL2main -lSDL2
 else ifeq ($(OS),LINUX)
 	LDFLAGS += 
-	LDLIBS += -lSDL2main -lSDL2
+	LDLIBS += 
 endif
 
 ifeq ($(OS),WINDOWS)
